@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 350px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.shareLinks {
+    text-transform: uppercase;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    color: #eff7e1;
+    background-color: #f8dc81;
+    border-radius: 50%;
+    transition: all 0.5s ease;
+    box-shadow: 3px 5px 10px rgba(23, 22, 36, 0.4);
+    overflow: hidden;
+}
+
+.shareLinks.active {
+    width: 140px;
+    height: 140px;
+    border-radius: 15px;
+    transform: translate(-30%, -23%);
+    transition: all 0.5s ease 0.4s;
+    padding: 10px;
+}
+
+.sendClose {
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    background-color: #f34969;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: absolute;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 4px 4px 10px rgba(243, 73, 105, 0.7);
+}
+
+.sendClose .send {
+    width: 50%;
+    margin-left: -3px;
+    margin-top: 2px;
+    position: absolute;
+    transition: transform 0.3s ease;
+    transition-delay: 0.2s;
+    animation: sendback 0.3s ease-in-out 0.5s;
+}
+
+.sendClose .close {
+    width: 25%;
+    position: absolute;
+    transform: scale(0);
+    animation: rotate-reverse 0.4s ease;
+}
+
+.sendClose.active {
+    transition-delay: 0.3s;
+    transform: translate(35%, 160%);
+}
+
+
+
